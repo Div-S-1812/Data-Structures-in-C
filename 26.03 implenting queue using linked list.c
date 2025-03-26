@@ -13,14 +13,14 @@ void ENqueue(struct node** queueFRONT, int value){
     //checking if queue is empty 
     if(*queueFRONT==NULL){
         *queueFRONT=(struct node*)malloc(sizeof(struct node));
-        /*if(queueFRONT==NULL){
+        if(queueFRONT==NULL){
             printf("Error");
-        }*/
-        //else{
+        }
+        else{
             (*queueFRONT)->data=value;
             (*queueFRONT)->link=NULL;
             printf("First element successfully queued.\n");
-        //}
+        }
     }
 
     else{
