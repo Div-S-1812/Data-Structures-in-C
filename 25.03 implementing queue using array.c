@@ -33,7 +33,7 @@ int queueFULL(struct QUEUE* queue1){
         //printf("Queue is FULL");
         return 1;
     }
-
+    
     else{
         //printf("Queue isn't full");
         return 0;
@@ -46,12 +46,19 @@ void ENqueue(struct QUEUE* queue1, int value){
     //checking if queue is empty 
     int full=queueFULL(queue1);
     if(full==1){
-        printf("Queue is full");
+        printf("Queue is full.\n");
     }
 
     else{
+        
         queue1->queueARRAY[queue1->rear]=value; 
         queue1->rear+=1;
+        if(queue1->rear==0){
+            printf("First value enqueued.\n");
+        }
+        else{
+            printf("Value enqueued.\n");
+        }
     }
 }
 
