@@ -77,6 +77,7 @@ int main(){
     ENqueue(queue1, 1);
     ENqueue(queue1, 2);
     ENqueue(queue1, 3);
+    ENqueue(queue1, 4);
 
     DEqueue(queue1);
     return 0;
